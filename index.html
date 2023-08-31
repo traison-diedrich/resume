@@ -19,8 +19,8 @@
 			<div
 				class="p-6 mx-auto page max-w-2xl print:max-w-letter md:max-w-letter xsm:p-8 sm:p-9 md:p-16 bg-white">
 				<!-- Name -->
-				<header class="flex items-center justify-between mb-8">
-					<div class="flex flex-col justify-center">
+				<header class="flex items-center justify-between gap-2 mb-8">
+					<div class="w-full flex flex-col justify-center">
 						<h1 class="text-4xl font-semibold text-gray-900">
 							Traison Diedrich
 						</h1>
@@ -53,11 +53,11 @@
 							</span>
 						</div>
 					</div>
-					<input
-						value="Print Resume"
-						type="button"
+					<button
 						onclick="handlePrint()"
-						class="bg-gray-900 print:hidden text-white text-md border-none cursor-pointer p-5 rounded" />
+						class="bg-gray-900 print:hidden text-white text-md rounded-md flex px-4 py-2 sm:py-4 sm:px-8">
+						Print
+					</button>
 					<script type="text/javascript">
 						const handlePrint = () => {
 							var actContents = document.body.innerHTML;
@@ -500,7 +500,7 @@
 											Saint Louis University
 										</h3>
 										<p class="leading-normal text-md text-gray-650">
-											2018 – 2023 | Bachelor's Degree in Computer Science
+											2018 – 2023 | Bachelor of Arts, Computer Science
 										</p>
 									</header>
 									<p
