@@ -19,36 +19,52 @@
 			<div
 				class="p-6 mx-auto page max-w-2xl print:max-w-letter md:max-w-letter xsm:p-8 sm:p-9 md:p-16 bg-white">
 				<!-- Name -->
-				<header class="flex flex-col justify-center mb-8">
-					<h1 class="text-4xl font-semibold text-gray-900">Traison Diedrich</h1>
-					<div class="flex text- text-gray-750 items-center gap-2">
-						<a
-							href="//traiiison.com"
-							class="group flex items-center gap-2"
-							target="_blank">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="24"
-								height="24"
-								viewBox="0 0 24 24">
-								<path
-									d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 10.199l-3.64 1.801 3.64 1.796v2.204l-6-2.935v-2.131l6-2.934v2.199zm8 2.866l-6 2.935v-2.204l3.64-1.796-3.64-1.801v-2.199l6 2.935v2.13z" />
-							</svg>
-							traiiison.com
-						</a>
-						|
-						<span class="flex items-center gap-2">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="24"
-								height="24"
-								viewBox="0 0 24 24">
-								<path
-									d="M12 0c-4.198 0-8 3.403-8 7.602 0 6.243 6.377 6.903 8 16.398 1.623-9.495 8-10.155 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.342-3 3-3 3 1.343 3 3-1.343 3-3 3z" />
-							</svg>
-							Saint Louis, MO
-						</span>
+				<header class="flex items-center justify-between mb-8">
+					<div class="flex flex-col justify-center">
+						<h1 class="text-4xl font-semibold text-gray-900">
+							Traison Diedrich
+						</h1>
+						<div class="flex text- text-gray-750 items-center gap-2">
+							<a
+								href="//traiiison.com"
+								class="group flex items-center gap-2"
+								target="_blank">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24">
+									<path
+										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 10.199l-3.64 1.801 3.64 1.796v2.204l-6-2.935v-2.131l6-2.934v2.199zm8 2.866l-6 2.935v-2.204l3.64-1.796-3.64-1.801v-2.199l6 2.935v2.13z" />
+								</svg>
+								traiiison.com
+							</a>
+							|
+							<span class="flex items-center gap-2">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24">
+									<path
+										d="M12 0c-4.198 0-8 3.403-8 7.602 0 6.243 6.377 6.903 8 16.398 1.623-9.495 8-10.155 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.342-3 3-3 3 1.343 3 3-1.343 3-3 3z" />
+								</svg>
+								Saint Louis, MO
+							</span>
+						</div>
 					</div>
+					<input
+						value="Print Resume"
+						type="button"
+						onclick="handlePrint()"
+						class="bg-gray-900 print:hidden text-white text-md border-none cursor-pointer p-5 rounded" />
+					<script type="text/javascript">
+						const handlePrint = () => {
+							var actContents = document.body.innerHTML;
+							document.body.innerHTML = actContents;
+							window.print();
+						};
+					</script>
 				</header>
 				<!-- end Name -->
 
